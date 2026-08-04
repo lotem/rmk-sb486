@@ -25,39 +25,29 @@ matrix_map = """
 (6,4)       (7,1)             (7,8)                   (5,9)       (4,9)                   (7,5) (6,5) (7,2)
 """
 
+[aliases]
+num_esc = "LT(1, esc)"
+num_tog = "TG(1)"
+
 [[layer]]
 name = "base"
 keys = """
-    F1 F2 F3 F4 F5 F6 F7 F8                                TG(1) TG(1)
-LT(1, Esc) 1 2 3 4 5 6 7 8 9 0 Minus Equal Slash Backspace Insert Home PageUp
-Tab Q W E R T Y U I O P LeftBracket RightBracket Enter     Delete End  PageDown
-CapsLock A S D F G H J K L Semicolon Quote
-LShift Z X C V B N M Comma Dot Slash Rshift                     Up
-LCtrl  LAlt    Space           RAlt  RCtrl                 Left Down Right
+         f1 f2 f3 f4 f5 f6 f7 f8                @num_tog @num_tog
+@num_esc 1 2 3 4 5 6 7 8 9 0 mins eql slsh bspc ins  home pgup
+tab      q w e r t y u i o p lbrc rbrc ent      del  end  pgdn
+caps     a s d f g h j k l scln quot
+lsft     z x c v b n m comm dot slsh rsft            up
+lctl lalt          spc          ralt rctl       left down rght
 """
 
 [[layer]]
 name = "num"
 keys = """
-_ _ _ _ F9 F10 F11 F12                           _ _
-_ _ _ _ _ _ _ Kp7 Kp8 Kp9 KpAsterisk _ _ Grave _ NumLock _ _
-_ _ _ _ _ _ _ Kp4 Kp5 Kp6 KpMinus _ _ KpEnter    _ _ _
-_ _ _ _ _ _ _ Kp1 Kp2 Kp3 KpPlus _
-_ _ _ _ _ _ _ Kp0 No KpDot KpSlash _             AudioVolUp
-_ _ _ _ _                              AudioMute AudioVolDown MediaPlayPause
+_ _ _ _ f9 f10 f11 f12                       _ _
+_ _ _ _ _ _ _ kp7 kp8 kp9 past _ _ grv _ num _ _
+_ _ _ _ _ _ _ kp4 kp5 kp6 pmns _ _ pent  _   _ _
+_ _ _ _ _ _ _ kp1 kp2 kp3 ppls _
+_ _ _ _ _ _ _ kp0 no pdot psls _             volu
+_ _ _ _ _                               mute vold mply
 
 """
-
-[light]
-# All light pins are high-active by default, uncomment if you want it to be low-active
-# capslock.pin = "PB2"
-# capslock.low_active = true
-# scrolllock.pin = "PA3"
-# scrolllock.low_active = true
-# Just ignore if no light pin is used for it
-# numslock.pin = "PA5"
-# numslock.low_active = true
-
-[storage]
-# Storage feature is enabled by default
-# enabled = false
